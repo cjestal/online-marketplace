@@ -5,7 +5,7 @@ namespace online_marketplace
 	public class Product
 	{
 		public int Id { get; private set; } // this is a read-only property and auto generated upon instantiation.
-		public string Name { get; set; } 
+		public string Name { get; set; }
 		public decimal Price { get; set; } // is used for calculating totals
 		public int Quantity { get; set; } // for inventory purposes
 
@@ -18,13 +18,11 @@ namespace online_marketplace
 			Quantity = quantity; // Initialize quantity
 		}
 
-
-		// updates a product. name, price, and quantity can be updated for data integrity.
 		public void UpdateProduct(string newName, decimal newPrice, int newQuantity)
 		{
 			Name = newName;
 			Price = newPrice;
-			Quantity = newQuantity; // Update quantity
+			Quantity = newQuantity;
 		}
 
 	}
